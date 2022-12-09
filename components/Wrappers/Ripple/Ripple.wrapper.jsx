@@ -1,11 +1,12 @@
-import styles from './Wrapper.module.css';
+import styles from './Ripple.wrapper.module.css';
 import { useEffect, useLayoutEffect, useState, useRef, useCallback } from 'react';
 import anime from 'animejs';
-import useTheme from '../../context/Theme.context';
+import useTheme from '../../../context/Theme.context';
 
-export default function Main({ children }) {
-  const tileEdge = 70; 
+export default function RippleWrapper({ children }) {
+  const tileEdge = 70;
   const { switch_, colorScheme } = useTheme();
+  const [toggle, setToggle] = useState(false);
 
   const [colums, setCol] = useState(0),
     [rows, setRow] = useState(0);
@@ -27,7 +28,7 @@ export default function Main({ children }) {
 
   useEffect(() => {
     setCol(Math.floor(document.body.clientWidth / tileEdge));
-    setRow(Math.floor(document.body.clientHeight / tileEdge));
+    setRow(Math.floor(document.body.clientHeight / 2 / tileEdge));
   }, []);
 
   useEffect(() => {
@@ -39,6 +40,8 @@ export default function Main({ children }) {
       duration: 100,
     });
     animationRef.current.restart();
+
+    setToggle(!toggle);
   }, [colorScheme.colors.tile]);
 
   return (

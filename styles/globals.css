@@ -8,11 +8,25 @@ html,
   padding: 0;
   box-sizing: border-box;
   font-family: "IBM Plex Mono";
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 
 body {
   color: var(--color_text);
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 

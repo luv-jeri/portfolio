@@ -54,16 +54,12 @@ export const ThemeProvider = ({ children }) => {
   const currentColorScheme = useRef(0);
 
   const switch_ = () => {
-    console.log('currentColorScheme', currentColorScheme.current);
-    console.log('colorScheme', colorScheme);
     const nextColorScheme =
       currentColorScheme.current + 1 >= colorPalette.length
         ? 0
         : currentColorScheme.current + 1;
-    console.log('nextColorScheme', nextColorScheme);
     currentColorScheme.current = nextColorScheme;
     setColorScheme(colorPalette[nextColorScheme]);
-    console.log('colorScheme', colorScheme);
   };
 
   useEffect(() => {
