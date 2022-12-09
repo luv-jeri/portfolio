@@ -4,7 +4,7 @@ import anime from 'animejs';
 import useTheme from '../../context/Theme.context';
 
 export default function Main({ children }) {
-  const tileEdge = 70;
+  const tileEdge = 70; 
   const { switch_, colorScheme } = useTheme();
 
   const [colums, setCol] = useState(0),

@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color_tile);
+    /* background-color: var(--color_tile); */
     /* font-family: "PT Mono"; */
     margin-inline: auto;
     padding: 10px 20px;
@@ -33,15 +33,16 @@
 
 .letter {
     font-family: "Inconsolata";
-    -webkit-text-stroke-width: 0.9px;
-    -webkit-text-stroke-color: #290c00;
-    text-shadow: 2px 2px 0px #eb5e28;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: var(--color_background);
+    text-shadow: 2px 2px 0px var(--color_primary);
 }
 
 .logo>span:hover {
-    color: #eb5e28;
+
+    -webkit-text-stroke-color: var(--color_muted);
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: var(--color_primary);
 
 }
 
