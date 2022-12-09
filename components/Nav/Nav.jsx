@@ -4,14 +4,14 @@ import s from './Nav.module.css';
 // import heartLottie from '../../assets/heartLottie.json';
 
 export default function Nav() {
-//   const defaultOptions = {
-//     loop: true,
-//     autoplay: true,
-//     animationData: heartLottie,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice',
-//     },
-//   };
+  //   const defaultOptions = {
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: heartLottie,
+  //     rendererSettings: {
+  //       preserveAspectRatio: 'xMidYMid slice',
+  //     },
+  //   };
 
   return (
     <nav className={s.nav}>
@@ -28,7 +28,7 @@ export default function Nav() {
       </div>
       <div className={s.message}>
         Hey Good to see you here <span className={s.heart}>❤️ </span>
-        If you like my work, please consider buying me a coffee
+        App is in delopment mode, will be live soon
       </div>
     </nav>
   );
