@@ -33,7 +33,7 @@
 }
 
 .icon:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color_primary);
     color: rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     scale: 1.1;
@@ -57,7 +57,7 @@
     font-family: 'Martian Mono', monospace;
     font-size: 5vw;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: var(--color_text);
     margin: 0;
 
 }
@@ -65,7 +65,7 @@
 .subTitle {
     font-family: 'Martian Mono', monospace;
     font-weight: 900;
-    color: rgb(255, 255, 255);
+    color: var(--color_text);
     margin-bottom: 0;
 
 }
@@ -74,7 +74,7 @@
     font-family: 'Martian Mono', serif;
     font-size: 1.2vw;
     font-weight: 200;
-    color: rgb(255, 255, 255);
+    color: var(--color_text);
     margin: 1vw 0;
 }
 
@@ -107,7 +107,7 @@
     font-weight: 500;
     list-style: none;
     padding: 0.8vw;
-    color: rgb(255, 255, 255);
+    color: var(--color_text);
     background-color: #6D67E4;
     border-radius: 0.5vw;
     border: 3px solid rgb(255, 255, 255);
@@ -135,7 +135,7 @@
 .details button {
     font-size: 3vw;
     padding: 0.3vw;
-    color: rgb(255, 255, 255);
+    color: var(--color_text);
     background-color: #6D67E4;
     border-radius: 0.5vw;
     border: 3px solid rgb(255, 255, 255);

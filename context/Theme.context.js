@@ -13,7 +13,7 @@ const colorPalette = [
     id: 0,
     colors: {
       background: '#000814',
-      text: '#eb5e28',
+      text: '#eee',
       primary: '#eb5e28',
       secondary: '#eee',
       accent: '#000814',
