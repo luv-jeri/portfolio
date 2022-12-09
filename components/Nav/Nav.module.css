@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000814;
+    /* font-family: "PT Mono"; */
+    margin-inline: auto;
+    padding: 10px 20px;
+    /* width: 95vw; */
+    /* box-shadow: 6px 8px 0px -1px #eb5e28; */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.letter {
+    font-family: "Inconsolata";
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #290c00;
+    text-shadow: 2px 2px 0px #eb5e28;
+}
+
+.logo>span:hover {
+    color: #eb5e28;
+    cursor: pointer;
+    background-color: #ffffff;
+
+}
+
+.message {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    flex: 1;
+    font-size: 16px;
+    text-align: end;
+}
