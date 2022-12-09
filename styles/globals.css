@@ -20,6 +20,16 @@ html,
   /* Safari and Chrome */
 }
 
+:root {
+  --color_text: #000;
+  --color_background: #fff;
+  --color_primary: #000;
+  --color_secondary: #fff;
+  --color_accent: #000;
+  --color_muted: #000;
+  --color_gradient: linear-gradient(to right, rgba(98, 0, 234, 1) 0%, rgba(236, 64, 122, 1) 15%, rgba(98, 0, 234, 1) 100%);
+  
+}
 
 body {
   color: var(--color_text);

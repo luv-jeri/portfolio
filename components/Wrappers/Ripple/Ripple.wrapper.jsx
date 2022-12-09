@@ -16,7 +16,7 @@ export default function RippleWrapper({ children }) {
 
   const handleResize = useCallback(() => {
     setCol(Math.floor(document.body.clientWidth / tileEdge));
-    setRow(Math.floor(document.body.clientHeight / tileEdge));
+    setRow(Math.floor(document.body.clientHeight / 2 / tileEdge));
   }, [tileEdge]);
 
   useEffect(() => {
