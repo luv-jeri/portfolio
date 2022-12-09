@@ -4,11 +4,13 @@ const {
   useEffect,
   useLayoutEffect,
   useContext,
+  useRef,
 } = require('react');
 
 const colorPalette = [
   {
     name: 'light',
+    id: 0,
     colors: {
       background: '#eee',
       text: '#000814',
@@ -21,18 +23,7 @@ const colorPalette = [
   },
   {
     name: 'dark',
-    colors: {
-      background: '#000814',
-      text: '#eee',
-      primary: '#eee',
-      secondary: '#eee',
-      accent: '#eee',
-      muted: '#eee',
-      tile: '#000814',
-    },
-  },
-  {
-    name: 'blue',
+    id: 1,
     colors: {
       background: '#000814',
       text: '#eee',
@@ -57,22 +48,32 @@ const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [colorScheme, setColorScheme] = useState(colorPalette[0]);
+  const [mounted, setMounted] = useState(false);
+  const currentColorScheme = useRef(0);
 
   const switch_ = () => {
-    const random = Math.floor(Math.random() * colorPalette.length);
-    setColorScheme(colorPalette[random]);
+    console.log('currentColorScheme', currentColorScheme.current);
+    console.log('colorScheme', colorScheme);
+    const nextColorScheme =
+      currentColorScheme.current + 1 >= colorPalette.length
+        ? 0
+        : currentColorScheme.current + 1;
+    console.log('nextColorScheme', nextColorScheme);
+    currentColorScheme.current = nextColorScheme;
+    setColorScheme(colorPalette[nextColorScheme]);
+    console.log('colorScheme', colorScheme);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const root = window.document.documentElement;
     Object.entries(colorScheme.colors).forEach(([name, colorByTheme]) => {
       const cssVarName = `--color_${name}`;
-      console.log(cssVarName, colorByTheme);
       root.style.setProperty(cssVarName, colorByTheme);
     });
-
-    console.log('root', root.style);
-  }, [colorScheme]);
+    root.style.setProperty('--color_scheme', colorScheme.name);
+    console.log('useEffect', colorScheme);
+    console.log('root', root.style.getPropertyValue('--color_scheme'));
+  }, [colorScheme.name, colorScheme.colors, colorScheme]);
 
   return (
     <ThemeContext.Provider
