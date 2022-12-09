@@ -13,10 +13,7 @@
     width: calc(100vw - 1px);
     display: grid;
     grid-gap: 1px;
-    background: linear-gradient(to right, rgba(98, 0, 234, 1) 0%, rgba(236, 64, 122, 1) 15%, rgba(98,
-                0,
-                234,
-                1) 100%);
+    background: var(--color_gradient);
     animation: background-pan 3s linear infinite;
     background-size: 200% 100%;
     overflow: hidden;

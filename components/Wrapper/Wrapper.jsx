@@ -11,6 +11,7 @@ export default function Main({ children }) {
     [rows, setRow] = useState(0);
 
   const animationRef = useRef(null);
+  const index = useRef(null);
 
   const handleResize = useCallback(() => {
     setCol(Math.floor(document.body.clientWidth / tileEdge));
@@ -29,18 +30,16 @@ export default function Main({ children }) {
     setRow(Math.floor(document.body.clientHeight / tileEdge));
   }, []);
 
-  const onClick = (index) => {
+  useEffect(() => {
     animationRef.current = anime({
       targets: '#tile',
       backgroundColor: colorScheme.colors.tile,
-      delay: anime.stagger(30, { grid: [colums, rows], from: index || 'center' }),
+      delay: anime.stagger(30, { grid: [colums, rows], from: index.current || 'center' }),
       autoplay: false,
       duration: 100,
     });
-
-    switch_();
     animationRef.current.restart();
-  };
+  }, [colorScheme.colors.tile]);
 
   return (
     <div
@@ -54,7 +53,9 @@ export default function Main({ children }) {
       {Array.from({ length: colums * rows }, (v, i) => {}).map((v, i) => (
         <div
           onClick={() => {
-            onClick(i);
+            index.current = i;
+            switch_();
+            // animationRef.current.restart();
           }}
           id='tile'
           className={`${styles.tile}`}

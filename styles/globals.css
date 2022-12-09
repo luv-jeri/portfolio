@@ -11,6 +11,11 @@ html,
 }
 
 
+body {
+  color: var(--color_text);
+}
+
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: light dark;

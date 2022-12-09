@@ -14,10 +14,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000814;
+    background-color: var(--color_tile);
     /* font-family: "PT Mono"; */
     margin-inline: auto;
     padding: 10px 20px;
+    border-bottom: 1px solid var(--color_accent);
     /* width: 95vw; */
     /* box-shadow: 6px 8px 0px -1px #eb5e28; */
 }
@@ -47,7 +48,6 @@
 .message {
     margin-left: 20px;
     font-size: 1.5rem;
-    color: #ffffff;
     flex: 1;
     font-size: 16px;
     text-align: end;

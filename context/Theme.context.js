@@ -9,29 +9,31 @@ const {
 
 const colorPalette = [
   {
-    name: 'light',
+    name: 'dark',
     id: 0,
+    colors: {
+      background: '#000814',
+      text: '#eb5e28',
+      primary: '#eb5e28',
+      secondary: '#eee',
+      accent: '#000814',
+      muted: '#eee',
+      tile: '#000814',
+      gradient: `linear-gradient(to right, rgba(98, 0, 234, 1) 0%, rgba(236, 64, 122, 1) 15%, rgba(98,0, 234, 1) 100%)`,
+    },
+  },
+  {
+    name: 'light',
+    id: 2,
     colors: {
       background: '#eee',
       text: '#000814',
       primary: '#000814',
       secondary: '#000814',
-      accent: '#000814',
+      accent: '#eee',
       muted: '#000814',
       tile: '#eee',
-    },
-  },
-  {
-    name: 'dark',
-    id: 1,
-    colors: {
-      background: '#000814',
-      text: '#eee',
-      primary: '#eee',
-      secondary: '#eee',
-      accent: '#eee',
-      muted: '#eee',
-      tile: '#000814',
+      gradient: `linear-gradient(to right, rgba(98, 0, 234, 1) 0%, rgba(236, 64, 122, 1) 15%, rgba(98,0, 234, 1) 100%)`,
     },
   },
 ];
