@@ -63,14 +63,14 @@ export const ThemeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    Object.entries(colorScheme.colors).forEach(([name, colorByTheme]) => {
-      const cssVarName = `--color_${name}`;
-      root.style.setProperty(cssVarName, colorByTheme);
-    });
-    root.style.setProperty('--color_scheme', colorScheme.name);
-    console.log('useEffect', colorScheme);
-    console.log('root', root.style.getPropertyValue('--color_scheme'));
+    if (window) {
+      const root = window.document.documentElement;
+      Object.entries(colorScheme.colors).forEach(([name, colorByTheme]) => {
+        const cssVarName = `--color_${name}`;
+        root.style.setProperty(cssVarName, colorByTheme);
+      });
+      root.style.setProperty('--color_scheme', colorScheme.name);
+    }
   }, [colorScheme.name, colorScheme.colors, colorScheme]);
 
   return (

@@ -4,7 +4,7 @@ import anime from 'animejs';
 import useTheme from '../../../context/Theme.context';
 
 export default function RippleWrapper({ children }) {
-  const tileEdge = 70;
+  const tileEdge = 90;
   const { switch_, colorScheme } = useTheme();
   const [toggle, setToggle] = useState(false);
 
@@ -20,9 +20,9 @@ export default function RippleWrapper({ children }) {
   }, [tileEdge]);
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window?.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window?.removeEventListener('resize', handleResize);
     };
   }, [handleResize, tileEdge]);
 
@@ -53,6 +53,8 @@ export default function RippleWrapper({ children }) {
         gridTemplateRows: `repeat(${rows}, 1fr)`,
       }}
     >
+      <div className={styles.children}>{children}</div>
+
       {Array.from({ length: colums * rows }, (v, i) => {}).map((v, i) => (
         <div
           onClick={() => {
@@ -65,7 +67,6 @@ export default function RippleWrapper({ children }) {
           key={i}
         ></div>
       ))}
-      <div className={styles.children}>{children}</div>
     </div>
   );
 }
