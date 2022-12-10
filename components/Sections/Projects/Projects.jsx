@@ -126,7 +126,7 @@ export default function Projects() {
         </div>
       </div>
       <div className={s.projectGallery}>
-        <ParallaxImageGallery images={images}></ParallaxImageGallery>
+        {/* <ParallaxImageGallery images={images}></ParallaxImageGallery> */}
       </div>
     </div>
   );
