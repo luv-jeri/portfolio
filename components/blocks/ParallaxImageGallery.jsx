@@ -31,7 +31,7 @@ export default function ParallaxImageGallery({ images }) {
       // randome Height between 200 and 400
       const randomHeight = Math.floor(Math.random() * 200) + 200;
       image.style.transform = `translate(${random}px, ${0}px)`;
-      image.style.marginTop = `${randomMarginTop}px`;
+      // image.style.marginTop = `${randomMarginTop}px`;
       // image.style.height = `${randomHeight}px`;
     });
   }, []);
@@ -44,7 +44,7 @@ export default function ParallaxImageGallery({ images }) {
   }, []);
 
   return (
-    <div id='parent' className={s.parent}>
+    <>
       <ParallaxProvider scrollContainer={cont}>
         <div className={s.fadeUp}></div>
         <div id='container'  className={s.container} ref={imagesRef}>
@@ -62,6 +62,6 @@ export default function ParallaxImageGallery({ images }) {
           })}
         </div>
       </ParallaxProvider>
-    </div>
+    </>
   );
 }
