@@ -7,16 +7,16 @@ export default function ParallaxImageGallery({ images }) {
   const imagesRef = useRef(null);
   const animeRef = useRef(null);
 
-  useEffect(() => {
-    animeRef.current = anime({
-      targets: '#photo',
-      translateX : [0, 20],
-      direction: 'alternate',
-      loop: true,
-      easing: 'easeInOutSine',
-      duration: 5000,
-    });
-  }, []);
+  // useEffect(() => {
+  //   animeRef.current = anime({
+  //     targets: '#photo',
+  //     translateX : [0, 20],
+  //     direction: 'alternate',
+  //     loop: true,
+  //     easing: 'easeInOutSine',
+  //     duration: 5000,
+  //   });
+  // }, []);
 
   useEffect(() => {
     // randomly arrange images
@@ -47,7 +47,7 @@ export default function ParallaxImageGallery({ images }) {
     <div id='parent' className={s.parent}>
       <ParallaxProvider scrollContainer={cont}>
         <div className={s.fadeUp}></div>
-        <div id='container' className={s.container} ref={imagesRef}>
+        <div id='container'  className={s.container} ref={imagesRef}>
           {images.map((image, index) => {
             // randome speed between -5 and 5
             const randomSpeed = Math.floor(Math.random() * 30) - 15;

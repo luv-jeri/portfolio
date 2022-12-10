@@ -92,7 +92,6 @@
 
 .segmentRight {
     flex: 1;
-    padding-left: 5vw;
 }
 
 .box {
@@ -180,6 +179,32 @@
 
 }
 
-.segmentRight {
+
+@media only screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        padding: 2vw 4vw;
+    }
+
+    .left {
+        border-right: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        flex-direction: row;
+    }
+
+    .icon {
+        font-size: 5vw;
+    }
+
+    .right {
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 5vw;
+    }
+
+    .segment {
+        flex-direction: column;
+    }
+
 
 }

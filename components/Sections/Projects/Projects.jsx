@@ -52,7 +52,8 @@ export default function Projects() {
             </div>
           </div>
           <div className={s.segmentRight}>
-            <ParallaxImageGallery images={images}></ParallaxImageGallery></div>
+            <ParallaxImageGallery images={images}></ParallaxImageGallery>
+            </div>
         </div>
       </div>
     </div>
