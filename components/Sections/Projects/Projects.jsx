@@ -99,6 +99,7 @@ export default function Projects() {
   const icons = project.map((item) => item.icon);
   return (
     <div className={s.container}>
+      <div className={s.fadeUp}></div>
       <div className={s.projectIcons}>
         {icons.map((icon) => (
           <div className={s.icon}>{icon}</div>

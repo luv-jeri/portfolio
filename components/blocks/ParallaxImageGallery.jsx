@@ -46,8 +46,7 @@ export default function ParallaxImageGallery({ images }) {
   return (
     <>
       <ParallaxProvider scrollContainer={cont}>
-        {/* <div className={s.fadeUp}></div> */}
-        <div id='container'  className={s.container} ref={imagesRef}>
+        <div id='container' className={s.container} ref={imagesRef}>
           {images.map((image, index) => {
             // randome speed between -5 and 5
             const randomSpeed = Math.floor(Math.random() * 30) - 15;
