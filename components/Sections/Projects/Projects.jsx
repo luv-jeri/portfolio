@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Projects.module.css';
-import ParallaxImageGallery from '../../blocks/ParallaxImageGallery';
+import ParallaxImageGallery from '../../blocks/ParallaxImageGallery/ParallaxImageGallery';
 
 export default function Projects() {
   const images = [

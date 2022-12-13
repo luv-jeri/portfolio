@@ -33,9 +33,9 @@ html,
 
 body {
   color: var(--color_text);
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
   /* Internet Explorer 10+ */
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   /* Firefox */
 }
 

@@ -3,6 +3,7 @@ import Nav from '../components/Nav/Nav';
 import Hero from '../components/Sections/Hero';
 import Skill from '../components/Sections/Skill';
 import Project from '../components/Sections/Projects';
+import About from '../components/Sections/About';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Project />
+      <About/>
     </div>
   );
 }

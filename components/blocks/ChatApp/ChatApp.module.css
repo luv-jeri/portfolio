@@ -1,0 +1,65 @@
+.chatApp {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(254, 155, 155);
+}
+
+.header {
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 10px;
+    height: 10%;
+}
+
+.header> :nth-child(n) {
+    margin-right: 10px;
+}
+
+.dp {
+    height: 35px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.chatSection {
+    height: 80%;
+    overflow: scroll;
+
+   
+}
+
+.messageInput {
+    height: 10%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.sender {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: aquamarine;
+}
+
+.receiver {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
